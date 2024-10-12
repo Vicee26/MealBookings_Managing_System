@@ -1,0 +1,42 @@
+main{
+    display: grid;
+    max-height: 80vh;
+    overflow-y: auto; 
+}
+
+main > div {
+    grid-area: 1 / 1;
+}
+
+@keyframes slide {
+    from {
+        transform: var(--start-transform);
+    }
+    to {
+        transform: var(--end-transform);
+    }
+}
+
+.slide-in-right {
+    animation: slide 1s ease-in;
+    --start-transform: translateX(125%);
+    --end-transform: translateX(0);
+}
+
+.slide-in-left {
+    animation: slide 1s ease-in;
+    --start-transform: translateX(-125%);
+    --end-transform: translateX(0);
+}
+
+.slide-out-right {
+    animation: slide 1s ease-out;
+    --start-transform: translateX(0);
+    --end-transform: translateX(-125%);
+}
+
+.slide-out-left {
+    animation: slide 1s ease-out;
+    --start-transform: translateX(0);
+    --end-transform: translateX(125%);
+}

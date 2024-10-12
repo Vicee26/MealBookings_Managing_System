@@ -1,0 +1,119 @@
+
+/*.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}*/
+
+body {
+    overflow: hidden; /* Hide scrollbars */
+}
+
+nav img{
+    margin-right: 10px;
+}
+
+.dynamic-calendar{
+    display: flex;  
+    align-items: top;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.wrapper{
+    width:450px;
+    border-radius: 10px;
+}
+
+.wrapper header{
+    display: flex;
+    align-items:center;
+    padding: 25px 30px 10px;
+    justify-content: space-between;
+}
+
+header .current-date{
+    font-size: 1.45rem;
+    font-weight: 500;
+}
+
+header .icons span{
+    height: 38px;
+    width: 38px;
+    color: #878787;
+    font-size: 1.9rem;
+    cursor: pointer;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+}
+
+header .icons span:hover{
+    background: #f2f2f2;
+}
+
+header .icons span:last-child{
+    margin-right: -10px;
+}
+
+.calendar{
+    padding: 20px;
+}
+
+.calendar ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.calendar .days{
+    cursor: pointer;
+    font-weight: 20px;
+}
+
+.calendar .weeks li{
+    font-weight: 500;
+}
+
+.calendar .days li{
+    z-index: 1;
+    margin-top: 30px;
+    cursor: pointer;
+    
+}
+.calendar ul li{
+    position: relative;
+    width: calc(100%/7);
+}
+
+.days li.inactive{
+    color: #aaa;
+}
+
+.days li.active{
+    color: #db1db2;
+}
+
+.days li.active-old{
+    color: #17da88;
+}
+
+.calendar .days li::before{
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    top:50%;
+    left: 50%;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -40%);
+}
+
+
+.days li:not(.active):hover::sbefore{
+background: #f2f2f2;
+}
+
